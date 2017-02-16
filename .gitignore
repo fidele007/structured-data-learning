@@ -1,0 +1,6 @@
+*.o
+*.pyc
+*.so
+ess
+svm_python_learn
+svm_python_classify

@@ -1,0 +1,7 @@
+cow image from TU Darmstadt cow dataset,
+http://www.pascal-network.org/challenges/VOC/databases.html#TUD
+
+orginal data by Derek Magee, University of Leeds:
+  D. Magee and R. Boyle. 
+  Detecting Lameness using "Re-sampling Condensation" and "Multi-stream Cyclic Hidden Markov Models." 
+  Image and Vision Computing, vol 20(8), pp 581-594, 2002. 

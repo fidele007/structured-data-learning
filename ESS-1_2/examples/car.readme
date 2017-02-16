@@ -1,0 +1,8 @@
+car image (test-scale1.pgm) from UIUC Car dataset,
+http://l2r.cs.uiuc.edu/~cogcomp/Data/Car/
+
+Shivani Agarwal, Aatif Awan, and Dan Roth:
+Learning to detect objects in images via a sparse, part-based representation.
+IEEE Transactions on Pattern Analysis and Machine Intelligence, 
+26(11):1475-1490, 2004.
+
