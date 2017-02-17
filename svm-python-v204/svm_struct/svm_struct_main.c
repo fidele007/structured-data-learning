@@ -69,7 +69,7 @@ int main (int argc, char* argv[])
   if(struct_verbosity>=1) {
     printf("done\n"); fflush(stdout);
   }
-  
+
   /* Do the learning and return structmodel. */
   if(alg_type == 1)
     svm_learn_struct(sample,&struct_parm,&learn_parm,&kernel_parm,&structmodel);
@@ -92,6 +92,14 @@ int main (int argc, char* argv[])
   if(struct_verbosity>=1) {
     printf("done\n");fflush(stdout);
   }
+
+  printf("Exporting weight file..."); fflush(stdout);
+  FILE *weight_file = fopen(strcat(modelfile, ".weights"), "w");
+  for (int i = 0; i < structmodel.sizePsi; i++) {
+    fprintf(weight_file, "%f\n", *(structmodel.w + i));
+  }
+  fclose(weight_file);
+  printf("done\n");fflush(stdout);
 
   free_struct_sample(sample);
   free_struct_model(structmodel);
