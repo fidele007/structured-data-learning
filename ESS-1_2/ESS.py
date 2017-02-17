@@ -52,14 +52,15 @@ def subwindow_search(numpoints, width, height, xpos, ypos, clstid, weights):
 if __name__ == "__main__":
     import sys
     import pylab
+    import numpy as np
     from numpy import array
     
     try:
-        xyc = pylab.load(sys.argv[1])
+        xyc = np.loadtxt(sys.argv[1])
         x=array(xyc[:,0], c_double).copy() # force to be contiguous
         y=array(xyc[:,1], c_double).copy()
         c=array(xyc[:,2], c_double).copy()
-        w = pylab.load(sys.argv[2])
+        w = np.loadtxt(sys.argv[2])
         numpoints = len(x)
         width = max(x)+10
         height = max(y)+10
